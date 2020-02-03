@@ -1,0 +1,174 @@
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+body{
+	background: #fff;
+	margin: 0;
+	font: 15px/1.5 'Open Sans', sans-serif;
+	color: #8b8b8b; 
+}
+
+a{
+	text-decoration: none;
+	color: #8b8b8b;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+form,
+fieldset{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.page{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.conteiner{
+	max-width: 1030px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.visual{
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 27px 0;
+	position: relative;
+
+}
+
+.nav ul{
+	position: absolute;
+	top: -51px;
+	width: 300px;
+	min-height: 300px;
+	background: #37abc8;
+	right: -100px;
+	padding: 100px 35px 20px;
+	margin: 0;
+	list-style: none;
+	transition: all 0.5s cubic-bezier(.2, 1.83,.85,.72);
+	border-radius: 50%;
+	transform: scale(0);
+	transform-origin: 100% 0;
+	z-index: 1;
+}
+.nav:after{
+	content: "";
+	position: absolute;
+	top: -25px;
+	width: 300px;
+	min-height: 300px;
+	background: #37abc8;
+	right: -90px;
+	opacity: 0.6;
+	border-radius: 50%;
+	transform: scale(0);
+	transform-origin: 100% 0;
+	transition: all 0.5s ease;
+}
+
+
+.active .nav ul{
+	transform: scale(1);
+	transition: all 0.3s ease 0.2s;
+}
+
+.active .nav:after{
+	transform:  scale(1);
+}
+
+.nav ul a{
+	color: #fff;
+	font: 16px 'Montserrat', sans-serif;
+	display: inline-block;
+	padding: 5px 0;
+	position: relative;
+}
+
+.nav ul a:after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	height: 2px;
+	width: 0;
+	background: #fff;
+	transition: all 0.3s ease;
+	border-radius: 2px
+}
+
+.nav ul a:hover{
+	text-decoration: none;
+}
+
+.nav ul a:hover:after{
+	width: 100%
+}
+
+.btn-nav{
+	position: relative;
+	width: 24px;
+	height: 17px;
+	display: block;
+	transition: transform 0.3s ease;
+	z-index: 2;
+}
+
+.btn-nav span,
+.btn-nav:before,
+.btn-nav:after{
+	content: "";
+	position: absolute;
+	height: 3px;
+	left: 0;
+	right: 0;
+	background: #fff;
+	top: 50%;
+	margin-top: -1px;
+	transition: all 0.3s ease;
+}
+
+.btn-nav:before{
+	margin-top: 5px;
+}
+
+.btn-nav:after{
+	margin-top: -7px;
+}
+
+.active .btn-nav span{
+	opacity: 0;
+}
+.active .btn-nav:before,
+.active .btn-nav:after{
+	margin-top: -1px;
+	transform: rotate(45deg);
+}
+
+.active .btn-nav:after{
+	transform: rotate(-45deg);
+}
+
+@media(max-width: 1200px) {
+	
+}
