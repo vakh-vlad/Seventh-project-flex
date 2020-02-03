@@ -27,6 +27,12 @@ fieldset{
 	border: 0;
 }
 
+input,
+select,
+textarea{
+	font: 16px 'Open Sans', sans-serif;
+}
+
 .page{
 	width: 100%;
 	overflow: hidden;
@@ -47,12 +53,19 @@ fieldset{
 	
 }
 
+/*.visual .conteiner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+*/
 .header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 27px 0;
 	position: relative;
+	width: 100%
 
 }
 
@@ -169,6 +182,61 @@ fieldset{
 	transform: rotate(-45deg);
 }
 
-@media(max-width: 1200px) {
-	
+.search-form{
+	height: calc(100vh - 91px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-form h1{
+	margin: 0 0 20px;
+	font-size: 52px;
+	font-weight: 300;
+	color: #fff;
+	text-align: center;
+}
+
+.form-holder{
+	max-width: 448px;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+}
+
+.search-form input[type='search']{
+	width: 100%;
+	padding: 10px 20px;
+	line-height: 20px;
+	border: 0;
+}
+
+.search-form input[type='submit']{
+	width: 120px;
+	background: #fd4f32;
+	flex-shrink: 0;
+	border: 0;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+}
+
+.search-form input[type='submit']:hover{
+	opacity: 0.8;
+}
+
+@media(max-width: 767px) {
+	.search-form h1{
+		font-size: 26px;
+		line-height: 1.2;
+	}
+
+	.search-form{
+		height: 100vh;
+		margin: -91px 0 0;
+
+	}
 }
