@@ -5,7 +5,7 @@
 }
 
 body{
-	background: #fff;
+	background: #eee;
 	margin: 0;
 	font: 15px/1.5 'Open Sans', sans-serif;
 	color: #8b8b8b; 
@@ -198,7 +198,7 @@ textarea{
 	text-align: center;
 }
 
-.form-holder{
+.search-form .form-holder{
 	max-width: 448px;
 	margin: 0 auto;
 	width: 100%;
@@ -264,8 +264,155 @@ textarea{
 	color: #323232;
 }
 
+.promo-section{
+	background: #eee;
+	padding: 0 0 50px;
+	margin: 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.promo-header{
+	padding: 35px 0 25px;
+}
+
+.promo-header h1{
+	color: #323232;
+	text-transform: uppercase;
+	font: 16px 'Montserrat', sans-serif;
+}
+
+.promo-section .holder{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.destination{
+	width: 24%;
+	background: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0, 0.3);
+	
+}
+
+.destination a{
+	text-decoration: none;
+	
+}
+
+.destination .img-holder{
+	position: relative;
+}
+
+.destination .price{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: #fff;
+}
+
+.destination .img-holder img{
+	display: block;
+	width: 100%;
+	height: auto;
+
+}
+
+.destination .text-holder{
+	padding: 20px 18px 18px 20px;
+}
+
+.destination .text-holder h2{
+	color: #323232;
+	text-transform: uppercase;
+	font: 14px 'Montserrat', sans-serif;
+}
+
+.destination .text-holder p{
+	margin: 0;
+	color: #696969;
+	font-size: 13px;
+}
+
+.guidelines-section{
+	background: #fff;
+	padding: 70px 0;
+}
+
+.guidelines-section h1{
+	font-size: 52px;
+	font-weight: 300;
+}
+
+.guidelines-section .holder{
+	display: flex;
+	justify-content: space-between;
+}
+
+.guidelines-section .text-holde{
+	width: 30%;
+}
+
+.guidelines-section .text-holder h2{
+	color: #323232;
+	text-transform: uppercase;
+	font: 16px 'Montserrat', sans-serif;
+}
+
+.guidelines-section .text-holder p{
+	margin: 0;
+	font-size: 13px;
+}
+
+.email-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.email-form h2{
+	margin: 60px 0 20px;
+	font: 16px 'Montserrat', sans-serif;
+	color: #323232;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.email-form .form-holder{
+	max-width: 476px;
+	margin: 0 auto;
+	width: 100%;
+	display: flex;
+}
+
+.email-form input[type='email']{
+	width: 100%;
+	padding: 10px 20px;
+	line-height: 20px;
+	border: 0;
+	background: #eeeeee;
+}
+
+.email-form input[type='submit']{
+	width: 152px;
+	text-transform: uppercase;
+	background: #fd4f32;
+	flex-shrink: 0;
+	border: 0;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+}
+
+.email-form input[type='submit']:hover{
+	opacity: 0.8;
+}
+
+
 @media(max-width: 1024px){
-	.footer .conteiner{
+	.footer .conteiner,
+	.guidelines-section .holder{
 		flex-wrap: wrap;
 	}
 
@@ -274,13 +421,18 @@ textarea{
 		margin: 0 0 10px; 
 	}
 
-	.footer p{
+	.footer p,
+	.guidelines-section {
 		width: 100%;
 		text-align: center;
 	}
+
+	.destination{
+	width: 48%;
+	}
 }
 
-@media(max-width: 767px) {
+@media(max-width: 640px) {
 	.search-form h1{
 		font-size: 26px;
 		line-height: 1.2;
@@ -298,6 +450,10 @@ textarea{
 
 	.footer p{
 		font-size: 12px;
+	}
+
+	.destination{
+	width: 100%;
 	}
 }
 
